@@ -100,3 +100,14 @@ if (flock($fh,LOCK_EX)) {
 fclose($fh);
 echo "File 'testfile.txt' succesfully updated";
 
+// lectura de archivos completos
+
+// ejemplo 7-13 - file_gets_contents
+
+
+echo "<pre>";
+
+echo file_get_contents("testfile.txt");
+
+echo "</pre>";
+
