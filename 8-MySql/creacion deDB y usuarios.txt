@@ -13,3 +13,6 @@ GRANT ALL PRIVILEGES ON * . * TO 'rodrigo'@'localhost';
 
 Una vez hecho esto, tu nueva cuenta de usuario tendrá el mismo acceso a la base de datos que el usuario root
 
+5- comando para copias de seguridad
+
+mysqldump -u rodrigo -p libroPHP > copiaPHP.qsl
