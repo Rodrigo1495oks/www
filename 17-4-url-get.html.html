@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronus comunication Example</title>
+</head>
+
+<body>
+    <h1>Loading a page into a DIv</h1>
+    <div id="info">This sentence will be replaced</div>
+
+    <script>
+        nocache=`&nocache ${Math.random()*1000000}`
+
+        request = new asyncRequest()
+
+        request.open("GET","urlget.php?url=news.com"+nocache, true)
+
+       
+        
+        request.onreadystatechange = function () {
+            if (this.readyState == 4) {
+                if (this.status == 200) {
+                    if (this.responseText != null) {
+                        document.getElementById('info').innerHTML = this.responseText
+                    } else {
+                        alert("Comunication error: no data received")
+                    }
+                } else {
+                    alert("Comunication error: " + this.statusText)
+                }
+            }
+        }
+        request.send(null)
+        
+        function asyncRequest() {
+            try {
+                let request = new XMLHttpRequest()
+            } catch (error1) {
+                try {
+                    request = new ActiveXObject("Msxml2.XMLHTTP")
+                } catch (error2) {
+                    try {
+                        request = new ActiveXObject("Microsoft.XMLHTTP")
+                    } catch (error3) {
+                        request = false
+                    }
+                }
+                return request
+            }
+        }
+    </script>
+</body>
+
+</html>
