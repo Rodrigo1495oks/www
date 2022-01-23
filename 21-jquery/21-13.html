@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effects: Fading</title>
+</head>
+
+<body>
+    <button id="fadeout">fadeout</button>
+    <button id="fadein">fadein</button>
+    <button id="fadetoggle">fadetoggle</button>
+    <button id="fadeto">fadeto</button>
+    <p id="text">click the buttons</p>
+    <script>
+        $('#fadeout').click(function () {
+            $('#text').fadeOut('slow')
+        })
+        $('#fadein').click(function () {
+            $('#text').fadeIn('slow')
+        })
+        $('#fadetoggle').click(function () {
+            $('#text').fadeToggle('slow')
+        })
+        $('#fadeto').click(function () {
+            $('#text').fadeTo('slow', 0.5)
+        })
+    </script>
+</body>
+
+</html>

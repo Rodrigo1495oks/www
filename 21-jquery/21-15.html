@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efectts: animations</title>
+    <style>
+        #ball {
+            position: relative;
+        }
+
+        #box {
+            width: 640px;
+            height: 480px;
+            background-color: green;
+            border: 1px solid #444;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"><img src="ball.png" alt="ball" id="ball">
+
+    </div>
+
+    <script>
+        bounce()
+
+        function boune() {
+            $('#ball').animate({
+                left: '270px',
+                top: '380px'
+            }, 'slow', 'linear').animate({
+                left: '540px',
+                top: '190px'
+            }, 'slow', 'linear').animate({
+                left: '270px',
+                top: '0px'
+            }, 'slow', 'linear').animate({
+                left: '0px',
+                top: '190px'
+            }, 'slow', 'linear')
+        }
+    </script>
+</body>
+
+</html>

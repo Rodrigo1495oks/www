@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding</title>
+</head>
+
+<body>
+    <button id="slideup">slideup</button>
+    <button id="slidedown">slidedown</button>
+    <button id="slidetoggle">slideToggle</button>
+
+    <div id="para" style="background: #def">
+        <h2>A tale from two cities - By Charles Dickens</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cum exercitationem accusantium eveniet,
+            cupiditate porro nisi ullam ducimus hic maxime suscipit, eius id, error numquam laborum iure. Repellat
+            tenetur eaque temporibus, laborum quod nobis dolore magnam iure sunt recusandae rerum fugit ducimus dolor
+            iste nesciunt, libero, eligendi quasi magni animi. Magnam corrupti eveniet aut aliquam vero, consequuntur
+            fugiat laudantium, pariatur voluptate obcaecati nesciunt voluptatem neque dicta cum, consectetur quos?
+            Itaque illo obcaecati aspernatur exercitationem aperiam molestiae omnis illum!</p>
+    </div>
+
+    <script>
+        $('#slideup').click(function () {
+            $('#para').slideUp('slow')
+        })
+        $('#slidedown').click(function () {
+            $('#para').slideDown('slow')
+        })
+        $('#slidetoggle').click(function () {
+            $('#para').slideToggle('slow')
+        })
+    </script>
+</body>
+
+</html>
