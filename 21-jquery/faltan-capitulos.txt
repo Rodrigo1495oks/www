@@ -1,0 +1,2 @@
+los capitulos que no se han incluido aqui, se borraron por una mala configuracion de github desktop de otra maquina, cuando
+habia cargado los cambios, simplemente se habia elimiando tood en lo que trabaje en la computadora de escritorio
