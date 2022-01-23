@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebents: blur</title>
+</head>
+<body>
+    <h2>Click in nd out of these fields</h2>
+    <input type="text" id="first">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <script>
+        $('#first').focus()
+        $('input').focus(function () {
+            $(this.css('background','#ff0'))
+        })
+        $('input').blur(function () {
+            $(this.css('background','#aaa'))
+        })
+    </script>
+</body>
+</html>

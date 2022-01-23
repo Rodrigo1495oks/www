@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events: keypress</title>
+</head>
+
+<body>
+    <h2>Press some key</h2>
+    <div id="result"></div>
+
+    <script>
+        $(document).keypress(function (event) {
+            key = String.fromCharCode(event.which)
+
+            if (key >= 'a' && key <= 'z' ||
+                key >= 'A' && key <= 'Z' ||
+                key >= '0' && key <= '9') {
+                $('#result').html(`You pressed: ${key}`)
+                event.preventDefault()
+            }
+        })
+        
+    </script>
+</body>
+
+</html>

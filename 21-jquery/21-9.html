@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: Further mouse hndling</title>
+</head>
+
+<body>
+    <h2 id="test">Pass the mouse over me</h2>
+
+    <script>
+        $('#test').mouseenter(function () {
+            $(this).html("Hey, stop tickling!")
+        })
+        $('#test').mouseleave(function () {
+            $(this).html("Where did you go?")
+        })
+    </script>
+</body>
+
+</html>
