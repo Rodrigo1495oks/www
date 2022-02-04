@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM traversal: parents</title>
+</head>
+<body>
+    <div>
+        <div>
+            <section><blockquote>
+                <ul>
+                    <li >Item 1</li>
+                    <li id="elem">item 2</li>
+                    <li>item 3</li>
+                </ul>
+            </blockquote></section>
+        </div>
+    </div>
+    <script>
+        $("#elem").parents("div").css("background",'yellow')
+        $("#elem").parentsUntil("div").css("text-decoration",'underline')
+    </script>
+</body>
+</html>

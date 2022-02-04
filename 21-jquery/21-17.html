@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the dom: attr</title>
+</head>
+<body>
+
+    <h2>Exmple document</h2>
+    <p><a href="http://google.com" id="link" title="Google">Visit Google</a></p>
+    <script src="jquery.js"></script>
+    <script>
+        $("#link").text("Visit Yahoo")
+        $("#link").attr({href:"http://yahoo.com", title:"Yahoo"})
+
+        alert(`The new HTML is: \n ${$("p").html()}`)
+    </script>
+</body>
+</html>

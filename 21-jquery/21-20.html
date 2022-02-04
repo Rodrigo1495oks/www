@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversing: parent</title>
+</head>
+<body>
+    <ul>
+        <li>item #</li>
+        <li>item #</li>
+        <li>item #</li>
+    </ul>
+    <ul class="memo">
+        <li>item #</li>
+        <li>item #</li>
+        <li>item #</li>
+    </ul>
+    <ul>
+        <li>item #</li>
+        <li>item #</li>
+        <li>item #</li>
+    </ul>
+
+    <script src="jquery.js"></script>
+    <script>
+        $("li").parent().css("font-weight",'bold')
+        $("li").parent(".memo").css("list-style-type",'circle')
+
+    </script>
+</body>
+</html>

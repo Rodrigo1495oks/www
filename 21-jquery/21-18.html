@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modyfiying the DOM</title>
+</head>
+
+<body>
+    <h2>Example document</h2>
+    <a href="http://google.com" title="Google">Visit Google</a>
+    <code>
+        This is a code section
+    </code>
+    <p>
+        <button id="a">Remove the image</button>
+        <button id="b">Empty the quote</button>
+
+    </p>
+    <img src="girl.png" alt="imagen" id="girl">
+    <blockquote id="quote" style="border:1px dotted #444; height: 20px">test</blockquote>
+
+    <script src="jquery.js"></script>
+    <script>
+        $('a').prepend("Link: ")
+        $("[href^='http']").append(" <img src='girl2.png'>")
+        $("code").before('<hr>').after("<hr>")
+        $("#a").click(function () {
+            $("#ball").remove()
+        })
+        $("#b").click(function () {
+            $("#quote").empty()
+        })
+    </script>
+</body>
+
+</html>
