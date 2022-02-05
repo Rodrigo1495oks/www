@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery asynchronous post</title>
+</head>
+
+<body style="text-align:center">
+    <h1>Loading a page into a div</h1>
+    <div id="info">this sentence will be replaced</div>
+
+    <script src="jquery.js"></script>
+    <script>
+        $.post("urlpost.php", {
+            url: 'amazon.com/gp/aw'
+        }, function (data) {
+            $("#info").html(data)
+        })
+    </script>
+</body>
+
+</html>

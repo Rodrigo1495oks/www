@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>using is|</title>
+</head>
+
+<body>
+    <div><button>this is a button in a div</button></div>
+    <div><button>this is a button in a div</button></div>
+    <span><button>this is a span</button></span>
+    <div><button>this is a button in a div</button></div>
+    <span><button>this is a span</button></span>
+    <p id="info"></p>
+    <script src="jquery.js"></script>
+    <script>
+        $('button').click(function () {
+            var elem=''
+
+            if ($(this).parent().is('div')) {
+                elem='div'
+            }else{
+                elem='span'
+            }
+
+            $('#info').html('you clicked a '+elem)
+        })
+    </script>
+</body>
+
+</html>
