@@ -13,6 +13,7 @@
         This is a canvas element given the ID <i>mycanvas</i>
         This text is only visible in non-HTML5 browsers
     </canvas>
+<img src="" alt="   " id="myimage">
 
     <script src="osc.js"></script>
     <script>
@@ -25,6 +26,9 @@
         Context.arc(160, 120, 70, 0, Math.PI * 2, false)
         Context.closePath()
         Context.fill()
+
+        S("myimage").border='1px solid black'
+        O("myimage").src=Canvas.toDataURL()
     </script>
 </body>
 

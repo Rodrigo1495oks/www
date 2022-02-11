@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <canvas id="mycanvas" width="320" height="320"></canvas>
+    Canvas=
+    <script src="osc.js"></script>
+    <script>
+        Canvas=O("mycanvas")
+        context=Canvas.getContext("2d")
+        S(canvas).background="lightblue"
+        context.strokeStyle='orange'
+        context.fillStyle="yellow"
+
+        orig=160
+        points=21
+        dist=Math.PI/points*2
+        scale1=150
+        scale2=80
+
+        context.beginPath()
+
+        for (let i = 0; i<points; i++) {
+            x=Math.sin(j*dist)
+            y=Math.cos(j*dist)
+            context.lineTo(orig+x*scale1, orig+y*scale1)
+            context.lineTo(orig+x*scale2, orig+y*scale2)
+        }
+
+        context.closePath()
+        context.stroke()
+        context.fill()
+    </script>
+</body>
+</html>
