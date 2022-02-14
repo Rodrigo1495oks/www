@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing audio with javascript | non html5 compatibilidad</title>
+    <script src="osc.js"></script>
+</head>
+
+<body>
+    <audio id="myaudio" controls>
+        <object data="audioplayer.swf" type="application/x-shockwave-flash" width="300" height="30">
+            <param name="FlashVars" value="mp3=audio.mp3&showstop=1&showvolume=1">
+        </object>
+        <source src="audio.m4a" type="audio/aac">
+        <source src="audio.mp3" type="audio/mp3">
+        <source src="audio.ogg" type="audio/ogg">
+    </audio>
+
+    <script>
+        function playaudio() {
+            O("myaudio").play()
+        }
+
+        function pauseaudio() {
+            O("myaudio").pause()
+        }
+    </script>
+</body>
+
+</html>
