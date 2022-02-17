@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <script src="osc.js"></script>
+    <style>
+        #dest {
+            background-color: lightblue;
+            border: 1px solid #444;
+            width: 320px;
+            height: 100px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dest" ondrop="drop(event)" ondragover="allow(event)">
+        <br>
+        Drage the image below into the above element <br> <br>
+
+        <img src="image1.jpg" alt="" id="source1" draggable="true" ondragstart="drag(event)">
+        <img src="image2.jpg" alt="" id="source2" draggable="true" ondragstart="drag(event)">
+        <img src="image3.jpg" alt="" id="source3" draggable="true" ondragstart="drag(event)">
+
+        <script>
+            function allow(event) {
+                event.preventDefault()
+            }
+
+            function drag(event) {
+                event.dataTransfer.setData("image/png", event.target.id)
+
+            }
+
+            function drop(event) {
+                event.preventDefault()
+                var data = event.dataTransfer.getData("image/png")
+                event.target.appendChild(O(data))
+                
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>
