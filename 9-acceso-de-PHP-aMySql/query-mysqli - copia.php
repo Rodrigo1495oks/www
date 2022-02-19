@@ -13,9 +13,9 @@ if ($connection->connect_error) {
 }
 
 $rows=$result->nums_rows;
+
 for ($j=0; $j < $rows; $j++) { 
     $result->data_seek($j);
-    
     
     echo 'Author: ' .htmlspecialchars($result->fetch_assoc()['author']).'<br>';
     $result->data_seek($j);
