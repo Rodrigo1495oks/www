@@ -31,11 +31,6 @@ if (isset($_SESSION['user'])) {
 }
 
 echo <<<_MAIN
-
-_MAIN;
-
-?>
-
 <title>Rodrigo app</title>
 </head>
 
@@ -46,7 +41,38 @@ _MAIN;
                 R
                 <img src="rodri.gif" alt="a" id="rodrigo">drigo Nest
             </div>
+            <div class="username">$userstr</div>
+            <div data-role="content">
+
+
+_MAIN;
+
+if ($loggedin) {
+    # code...
+    echo <<<_LOGGEDIN
+        <div class="center">
+            <a href="members.php?view=$user" data-role="button" data-inline="true" data-icon="home" data-transition="slide">Home</a>
+            <a href="members.php" data-role="button" data-inline="true" data-transition="slide">Members</a>
+            <a href="friends.php" data-role="button" data-inline="true" data-transition="slide">Friends</a>
+            <a href="messages.php" data-role="button" data-inline="true" data-transition="slide">Messages</a>
+            <a href="profile.php" data-role="button" data-inline="true" data-transition="slide">Profile</a>
+            <a href="logout.php" data-role="button" data-inline="true" data-transition="slide">Log Out</a>
         </div>
-    </div>
-</body>
+    _LOGGEDIN;
+}else{
+    echo <<<_GUEST
+        <div class="center">
+            <a href="index.php" data-role="button" data-inline="true" data-icon="home" data-transition="slide">Home</a>
+            <a href="signup.php" data-role="button" data-inline="true" data-icon="plus" data-transition="slide">Sign Up</a>
+            <a href="login.php" data-role="button" data-inline="true" data-icon="check" data-transition="slide">Log In</a>
+
+        </div>
+        
+        <p class="info">
+        you must be logged in to use this ap
+        </p>
+
+    _GUEST;
+}
+?>
 
