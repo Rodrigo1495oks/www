@@ -4,7 +4,7 @@ require_once 'functions.php';
 
 if (isset($_POST['user'])){
     $user=sanitizeString($_POST['user']);
-    $result=queryMysqli("SELECT * FROM members WHERE user='$user'");
+    $result=queryMysql("SELECT * FROM members WHERE user='$user'");
 
     if ($result->num_rows){
         echo "<span class='taken'>&nbsp;&#x2718; ". "The username '$user' is taken</span>";
@@ -12,6 +12,7 @@ if (isset($_POST['user'])){
     }else{
         echo "<span class='available'>&nbsp;&#x2714;</span>". "The username '$user' is available</span>"; 
     }
+    
 }
 
 ?>
