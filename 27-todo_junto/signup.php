@@ -30,6 +30,7 @@ if (isset($_SESSION['user'])) {
 
     $hashedPassword=password_hash($pass, PASSWORD_DEFAULT); // USO EL HASH PARA MAYOR SEGURIDAD
 
+
     if ($user==''||$pass='') {
         # code...
         $error='Not all fields were entered <br> <br>';
@@ -41,7 +42,7 @@ if (isset($_SESSION['user'])) {
         }else{
 
 
-            queryMysql(`INSERT INTO members VALUES('$user','$pass')`);
+            queryMysql(`INSERT INTO members VALUES('$user','$hashedPassword')`); //cargo el hash - y creo el usuario con el hash
 
 
             if ($user==''||$pass=='') {
@@ -80,6 +81,7 @@ if (isset($_SESSION['user'])) {
 
     _FINAL;
 }
+
 
 ?>
 
