@@ -25,16 +25,35 @@ if (isset($_POST['user'])) {
     }
 }
 
-
-
-
-
-
-
-
-
-
+echo <<<_END
+            <form action="login.php" method="post">
+                <div class="" data-role="fieldcontain">
+                    <label for=""></label>
+                    <span class="error">$error</span>
+                </div>
+                <div class="" data-role="fieldcontain">
+                    <label for=""></label>
+                    Please enter your details to log in
+                </div>
+                <div class="" data-role="fieldcontain">
+                    <label for="">Username</label>
+                    <input type="text" name="user" id="username" maxlength="16" value='$user'>
+                </div>
+                <div class="" data-role="fieldcontain">
+                    <label for="">Password</label>
+                    <input type="pass" name="pass" id="password" maxlength="16" value='$pass'>
+                </div>
+                <div class="" data-role="fieldcontain">
+                    <label for=""></label>
+                    <input type="submit" value="Login" data-transition="slide">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+_END;
 
 
 ?>
+
 
