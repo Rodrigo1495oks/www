@@ -1,7 +1,8 @@
 <?php
 
 require_once "header.php";
-if ($loggedin) {
+
+if (!$loggedin) {
     die("</div> </body> </html>");
 }
 
@@ -70,6 +71,7 @@ if (isset($_FILES['image']['name'])) {
         }
         elseif ($h>$w&&$max<$h) {
             $tw=$max/$h*$w;
+            $th=$max;
         }
         elseif ($max<$w) {
             $tw=$th=$max;
@@ -78,8 +80,8 @@ if (isset($_FILES['image']['name'])) {
         $tmp=imagecreatetruecolor($tw,$th);
 
         imagecopyresampled($tmp,$src,0,0,0,0,$tw,$th,$w,$h);
-        imageconvolution($tmp, array(array(-1,-1,-1)),
-            array(-1,16,-1),array(-1,-1,-1), 8,0);
+        imageconvolution($tmp, array(array(-1,-1,-1),
+            array(-1,16,-1),array(-1,-1,-1)), 8,0);
         
         imagejpeg($tmp,$saveto);
         imagedestroy($tmp);
@@ -91,14 +93,14 @@ if (isset($_FILES['image']['name'])) {
 showProfile($user);
 
 echo <<<_TEXTAREA
-<form action="profile.php" method="post" enctype="multipart/form-data">
-    <h3>Enter or edit your details and/or upload an image</h3>
-    <textarea name="text" id="text" cols="30" rows="10">$text</textarea><br>
-    Image: <input type="image" src="" alt="imagen" size="14" name="image">
-    <input type="submit" value="Save Profile">
-</form>
-</div><br>
-</body>
+            <form action="profile.php" method="post" enctype="multipart/form-data" data-ajax='false'>
+                <h3>Enter or edit your details and/or upload an image</h3>
+                <textarea name="text" id="text" cols="30" rows="10">$text</textarea><br>
+                Image: <input type="image" src="" alt="imagen" size="14" name="image">
+                <input type="submit" value="Save Profile">
+            </form>
+        </div><br>
+    </body>
 </html>
 
 _TEXTAREA;
