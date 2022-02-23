@@ -2,6 +2,8 @@
 
 require_once 'functions.php';
 
+// podria estar en functions.php
+
 if (isset($_POST['user'])){
     $user=sanitizeString($_POST['user']);
     $result=queryMysql("SELECT * FROM members WHERE user='$user'");

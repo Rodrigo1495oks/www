@@ -23,8 +23,11 @@ echo <<<_END
 _END;
 
 $error=$user=$pass='';
+if(isset($_SESSION['user'])) {
+    destroySession();
+}
 
-if (isset($_SESSION['user'])) {
+if (isset($_POST['user'])) {
     $user=sanitizeString($_POST['user']);
     $pass=sanitizeString($_POST['pass']);
 
@@ -52,37 +55,38 @@ if (isset($_SESSION['user'])) {
         }
     }
 
-    echo <<<_FINAL
-                        <form action="signup.php" method="post">
-                        $error
-                        <div class="" data-role="fieldcontain"> <!-- cabecera del formulario-->
-                            <label for=""></label>
-                            Please enter your details to sign up
-                        </div>
-                        <div data-role="fieldcontain"><!-- campo del usuario-->
-                            <label for="">User Name</label>
-                            <input type="text" name="user" id="username" maxlength="16" value="$user" onblur="checkUser(this)"> <!-- devuelve el valor del formulario "this"-->
-
-                        </div>
-                        <div data-role="fieldcontain"> <!-- campo de la contraseña-->
-                            <label for="">Password</label>
-                            <input type="pass" name="pass" id="password" maxlength="16" value="$pass"> <!-- devuelve el valor del formulario "this"-->
-                        </div>
-                        <div data-role="fieldcontain"> <!-- submit del formulario -->
-                            <label for=""></label>
-                            <input type='submit' data-transition='slide' value='Sign Up'></input>
-
-                        </div>
-                    </form>
-                </div>
-
-            </body>
-        </html>
-
-    _FINAL;
+   
 }
 
+echo <<<_FINAL
 
+<form action="signup.php" method="post">
+$error
+<div class="" data-role="fieldcontain"> <!-- cabecera del formulario-->
+    <label for=""></label>
+    Please enter your details to sign up
+</div>
+<div data-role="fieldcontain"><!-- campo del usuario-->
+    <label for="">User Name</label>
+    <input type="text" name="user" id="username" maxlength="16" value="$user" onblur="checkUser(this)"> <!-- devuelve el valor del formulario "this"-->
+
+</div>
+<div data-role="fieldcontain"> <!-- campo de la contraseña-->
+    <label for="">Password</label>
+    <input type="password" name="pass" id="password" maxlength="16" value="$pass"> <!-- devuelve el valor del formulario "this"-->
+</div>
+<div data-role="fieldcontain"> <!-- submit del formulario -->
+    <label for=""></label>
+    <input type='submit' data-transition='slide' value='Sign Up'></input>
+
+</div>
+</form>
+</div>
+
+</body>
+</html>
+
+_FINAL;
 ?>
 
 

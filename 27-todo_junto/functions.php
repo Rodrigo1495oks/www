@@ -20,7 +20,7 @@ function queryMysql($query)
 
     if (!$result) {
         # code...
-        die("fatal error");
+        die(" <b>fatal error </b>");
     }
 
     return $result;
