@@ -2,8 +2,8 @@
 
 $hn = 'localhost';
 $db = 'red-social';
-$un = 'rodrigo';
-$pw = '12345';
+$un = 'root';
+$pw = '';
 
 $connection = new mysqli($hn, $un, $pw, $db);
 
