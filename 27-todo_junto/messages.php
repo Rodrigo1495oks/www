@@ -73,9 +73,22 @@ for($j=0;$j<$num;++$j){
             echo "whispered: <span class='whisper'>&quot; ";.$row['message']."&quot; </span>";
         }
 
-        if
+        if($row['recip']==$user){
+            echo "[<a href='messages.php?view=$view]". "&erase=".$row['id']."'>erase</a>]";
+
+            echo "<br>";
+        }
     }
 
 }
 
+if(!$num){
+    echo "<br> <span class='info'> No messages yet</span><br><br>";
+}
+echo "<br> <a data-role='button' href='messages.php?view=$view'>Refresh messages</a>";
+
 ?>
+
+</div> <br>
+</body>
+</html>
