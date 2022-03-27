@@ -133,7 +133,14 @@
             reason VARCHAR(16)
             '
     );
-
+    createTable(
+        'profilesShareholders',
+        'user VARCHAR(16),
+            text VARCHAR(4096),
+            age INT(3),
+            INDEX(user(6))
+            '
+    );
 
     ?>
 
