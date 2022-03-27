@@ -6,7 +6,7 @@ $db='assembly';
 $un='rodrigo';
 $pw='12345';
 
-$connection= new mysqli($dbhost, $dbuser, $dbpass, $dbname);
+$connection= new mysqli($hn, $un, $pw, $db);
 
 if ($connection->connect_error) {
     mysqlFatalError();
