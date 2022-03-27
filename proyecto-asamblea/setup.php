@@ -32,34 +32,39 @@
         'organism',
         'id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
             name VARCHAR(16),
-            description VARCHAR(255)
+            description VARCHAR(255),
+            INDEX(name(6))
     ');
     createTable(
         'position',
         'id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
             name VARCHAR(16),
-            description VARCHAR(255)
+            description VARCHAR(255),
+            INDEX(name(6))
             ');
 
     createTable(
         'typesAssembly',
         'id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
             name VARCHAR(16),
-            description VARCHAR(255)
+            description VARCHAR(255),
+            INDEX(name(6))
             '
     );
     createTable(
         'departments',
         'id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
             name VARCHAR(16),
-            description VARCHAR(255)
+            description VARCHAR(255),
+            INDEX(name(6))
             '
     );
     createTable(
         'itemsAssembly234',
         'id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
             name VARCHAR(16),
-            description VARCHAR(255)
+            description VARCHAR(255),
+            INDEX(name(6))
             '
     );
 
@@ -67,20 +72,23 @@
         'itemsAssembly235',
         'id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
             name VARCHAR(16),
-            description VARCHAR(255)
+            description VARCHAR(255),
+            INDEX(name(6))
             '
     );
     createTable(
         'cat',
         'id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
             name VARCHAR(16),
-            description VARCHAR(255)
+            description VARCHAR(255),
+            INDEX(name(6))
             '
     );
     createTable(
         'city',
         'CP INT(4),
-            name VARCHAR(16)
+            name VARCHAR(16),
+            INDEX(CP(6))
             '
     );
     createTable(
@@ -96,7 +104,8 @@
             state VARCHAR(16),
             city VARCHAR(16),
             specie VARCHAR(16),
-            gender VARCHAR(16)
+            gender VARCHAR(16),
+            INDEX(name(6))
             '
     );
 
@@ -109,7 +118,9 @@
             fecha DATE,
             place VARCHAR(16),
             expenses INT(10) UNSIGNED,
-            reason VARCHAR(100)
+            reason VARCHAR(100),
+            INDEX(organism),
+            INDEX(departments)
             '
     );
     createTable(
