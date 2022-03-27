@@ -34,18 +34,18 @@ $loggedin=FALSE;
 
 }
 
-echo <<<_MAIN 
-<body>
-    <section id="page">
-    <header id="header">
-    <div id="logo" class="center">
-    <img src="rodri.gif" alt="gif">
-    Aplicativo de Asambleas
-    </div>
-    </header>
-    <p class="username">$userstr</p>
-    </section>
-    <section id="content">
+echo <<<_MAIN
+    <body>
+        <section id="page">
+        <header id="header">
+        <div id="logo" class="center">
+        <img src="rodri.gif" alt="gif">
+        Aplicativo de Asambleas
+        </div>
+        </header>
+        <p class="username">$userstr</p>
+        </section>
+        <section id="content">
 _MAIN;
 
 if ($loggedin) {
@@ -65,14 +65,14 @@ if ($loggedin) {
 }else{
     echo <<<_GUEST
 
-    <nav class="menu center">
-        <ul class="menu-list">
-        <li class="menu-list_item"><i class="fa-solid fa-house"></i><a href="home.php'">Inicio</a></li>
-        <li class="menu-list_item"><i class="fa-solid fa-user-plus"></i><a href="signup.php">Registrarse</a></li>
-        <li class="menu-list_item"><i class="fa-solid fa-arrow-right-to-arc"></i><a href="login.php">Iniciar Sesión</a></li>
-        </ul>
-    </nav>
-<p class='notice-not-logged'>Debes estar registrado e iniciar sesión para usar esta aplicación</p>
+        <nav class="menu center">
+            <ul class="menu-list">
+            <li class="menu-list_item"><i class="fa-solid fa-house"></i><a href="home.php'">Inicio</a></li>
+            <li class="menu-list_item"><i class="fa-solid fa-user-plus"></i><a href="signup.php">Registrarse</a></li>
+            <li class="menu-list_item"><i class="fa-solid fa-arrow-right-to-arc"></i><a href="login.php">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+        <p class='notice-not-logged'>Debes estar registrado e iniciar sesión para usar esta aplicación</p>
 
 
     _GUEST;

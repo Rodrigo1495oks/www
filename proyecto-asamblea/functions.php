@@ -1,9 +1,8 @@
 <?php
 
-use LDAP\Result;
 
 $hn='localhost';
-$db='empresa';
+$db='assembly';
 $un='rodrigo';
 $pw='12345';
 
