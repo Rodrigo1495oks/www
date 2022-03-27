@@ -17,20 +17,13 @@ if ($loggedin) {
 
 echo <<<_END
 
-</div><br>
-<footer id="footer" class="footer">
-    <h4>Aplicativo Web creado por el Contador Rivas Rodrigo</h4>
-</footer>
-</body>
-</html>
-
+    </div><br>
+    <footer id="footer" class="footer">
+        <h4>Aplicativo Web creado por el Contador Rivas Rodrigo</h4>
+    </footer>
+    </body>
+    </html>
 _END;
-
-
-
-
-
-
 ?>
 
 
