@@ -54,6 +54,7 @@ if ($loggedin) {
         <nav class="menu center">
             <ul class="menu-list">
                 <li class="menu-list_item"><i class="fa-solid fa-house"></i><a href="members.php?view='$user'">Inicio</a></li>
+                <li class="menu-list_item"><i class="fa-solid fa-user-group"></i><a href="organism.php">Organismo de la Asamblea</a></li>
                 <li class="menu-list_item"><i class="fa-solid fa-user-group"></i><a href="members.php">Miembros</a></li>
                 <li class="menu-list_item"><i class="fa-solid fa-sitemap"></i><a href="hierarchies.php">Jerarquías</a></li>
                 <li class="menu-list_item"><i class="fa-brands fa-meetup"></i><a href="meeting.php">Reuniones</a></li>

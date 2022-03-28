@@ -2,6 +2,7 @@
         // DOBLE COMPROBACIÓN DEL USUARIO CON ESTE BLOQUE Y CON EL ONBLUR DE CHECKUSER.PHP; 
 require_once 'functions.php';
 require_once 'setup.php';
+
 if (isset($_POST['user'])) {
     # code...
     $user=sanitizeString($_POST['user']);

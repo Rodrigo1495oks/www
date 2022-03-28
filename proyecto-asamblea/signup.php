@@ -49,7 +49,7 @@ echo <<<_SIGN
                     <p class="form-title">Por favor, introduce tus datos</p>
                 </div>
                 <div class="fieldcontain">
-                    <label for="name">Nombre de Usuario: </label>
+                    <label for="user">Nombre de Usuario: </label>
                     <input type="text" name="user" id="user" value="$user" onblur="checkUser(this)">
                     <label for="used"></label>
                     <div id="used">&nbsp;</div>
