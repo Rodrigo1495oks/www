@@ -27,7 +27,7 @@ function queryMysql($query)
     if (!$result) {
         # code...
         mysqlFatalError("Consulta no realizada");
-
+        echo "<br> $connection->connect_error";
     }
 
     return $result;

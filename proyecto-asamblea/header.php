@@ -1,4 +1,5 @@
 <?php
+require_once "functions.php";
 
 session_start();
 
@@ -19,7 +20,6 @@ echo <<<_INIT
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 _INIT;
 
-require_once "functions.php";
 
 $userstr="Bienvenido visitante";
 
@@ -68,7 +68,7 @@ if ($loggedin) {
 
         <nav class="menu center">
             <ul class="menu-list">
-            <li class="menu-list_item"><i class="fa-solid fa-house"></i><a href="home.php'">Inicio</a></li>
+            <li class="menu-list_item"><i class="fa-solid fa-house"></i><a href="index.php'">Inicio</a></li>
             <li class="menu-list_item"><i class="fa-solid fa-user-plus"></i><a href="signup.php">Registrarse</a></li>
             <li class="menu-list_item"><i class="fa-solid fa-arrow-right-to-arc"></i><a href="login.php">Iniciar Sesión</a></li>
             </ul>

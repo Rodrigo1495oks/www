@@ -1,7 +1,7 @@
 <?php
         // DOBLE COMPROBACIÓN DEL USUARIO CON ESTE BLOQUE Y CON EL ONBLUR DE CHECKUSER.PHP; 
 require_once 'functions.php';
-
+require_once 'setup.php';
 if (isset($_POST['user'])) {
     # code...
     $user=sanitizeString($_POST['user']);
@@ -13,6 +13,4 @@ if (isset($_POST['user'])) {
         echo `<span class='available'>&nbsp;&#x2714; El nombre de usuario está disponible</span>`;
     }
 }
-
-
 ?>
